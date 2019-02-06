@@ -1,26 +1,28 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import Header from "./components/Header";
 import "./App.css";
 import Player from "./components/Player";
 
 class App extends Component {
   state = {
-    players: [{ name: "Mario", id: 0 }, { name: "Alex", id: 1 }, { name: "Andrei", id: 2 }]
+    players: [
+      { name: "Mario", id: 0 },
+      { name: "Alex", id: 1 },
+      { name: "Andrei", id: 2 }, 
+      { name: "Ioana", id: 3 },
+      { name: "Gabriel", id: 4}
+    ]
   };
 
   render() {
-    const jucatori = this.state.players.map(item => {
-      return (
-        <Player name={item.name} />
-      );
-    });
-
     return (
       <div class="scoreboard">
-        <Header title="Titlul meu" />
-
-        {jucatori}
+        <Header titlu="Titlul meu" />
+        { 
+          this.state.players.map(item => (
+            <Player key={item.id.toString()} name={item.name} />
+          ))   
+        }
       </div>
     );
   }

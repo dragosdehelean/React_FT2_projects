@@ -3,8 +3,8 @@ import React from "react";
 const Header = (props) => {
   return (
     <header>
-      <h1>{props.title}</h1>
-      <span class="stats">Players: 4</span>
+      <h1>{ props.titlu }</h1>
+      <span className="stats">Players: 4</span>
     </header>
   );
 };
