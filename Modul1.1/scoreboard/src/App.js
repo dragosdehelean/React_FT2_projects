@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div class="scoreboard">
-        <Header titlu="Titlul meu" />
+        <Header titlu="Scoreboard" totalPlayers={this.state.players.length} />
         { 
           this.state.players.map(item => (
             <Player key={item.id.toString()} name={item.name} />

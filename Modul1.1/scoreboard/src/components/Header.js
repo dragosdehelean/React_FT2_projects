@@ -4,7 +4,7 @@ const Header = (props) => {
   return (
     <header>
       <h1>{ props.titlu }</h1>
-      <span className="stats">Players: 4</span>
+      <span className="stats">Players: {props.totalPlayers}</span>
     </header>
   );
 };

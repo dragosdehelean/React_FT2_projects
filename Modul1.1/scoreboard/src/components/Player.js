@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 
 const Player = (props) => {
   return (
@@ -6,11 +7,7 @@ const Player = (props) => {
       <span class="player-name">
         <button class="remove-player">✖</button>{props.name}
       </span>
-      <div class="counter">
-        <button class="counter-action decrement">-</button>
-        <span class="counter-score">0</span>
-        <button class="counter-action increment">+</button>
-      </div>
+      <Counter />
     </div>
   );
 };
