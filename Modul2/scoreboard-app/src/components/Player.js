@@ -3,9 +3,9 @@ import Counter from "./Counter";
 
 const Player = (props) => {
   return (
-    <div class="player">
-      <span class="player-name">
-        <button class="remove-player">✖</button>{props.name}
+    <div className="player">
+      <span className="player-name">
+        <button className="remove-player">✖</button>{props.name}
       </span>
       <Counter />
     </div>
