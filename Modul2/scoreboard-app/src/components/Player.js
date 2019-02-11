@@ -7,7 +7,7 @@ const Player = (props) => {
       <span className="player-name">
         <button className="remove-player">✖</button>{props.name}
       </span>
-      <Counter />
+      <Counter handleScoreChange={props.handleScoreChange}/>
     </div>
   );
 };

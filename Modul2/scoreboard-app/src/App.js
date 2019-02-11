@@ -6,7 +6,7 @@ import Player from "./components/Player";
 class App extends Component {
   state = {
     players: [
-      { name: "Mario", id: 0 },
+      { name: "Mario", id: 0, score:0 },
       { name: "Alex", id: 1 },
       { name: "Andrei", id: 2 }, 
       { name: "Ioana", id: 3 },
@@ -14,13 +14,17 @@ class App extends Component {
     ]
   };
 
+  handleScoreChange = (id, direction) => {
+    // operatiune de modificare a state-ului
+  }
+
   render() {
     return (
       <div className="scoreboard">
         <Header titlu="Scoreboard" totalPlayers={this.state.players.length} />
         { 
-          this.state.players.map(item => (
-            <Player key={item.id.toString()} name={item.name} />
+          this.state.players.map(player => (
+            <Player key={player.id.toString()} name={player.name} handleScoreChange={this.handleScoreChange}/>
           ))   
         }
       </div>

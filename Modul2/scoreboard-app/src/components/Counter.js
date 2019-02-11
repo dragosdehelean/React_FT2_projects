@@ -10,7 +10,7 @@ class Counter extends Component {
     return (
       <div className="counter">
         <button className="counter-action decrement">-</button>
-        <span className="counter-score">0</span>
+        <span className="counter-score">{this.state.score}</span>
         <button className="counter-action increment">+</button>
       </div>
     );

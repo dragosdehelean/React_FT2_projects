@@ -4,6 +4,7 @@ import "./App.css";
 import Player from "./components/Player";
 
 class App extends Component {
+  
   state = {
     players: [
       { name: "Mario", id: 0 },
